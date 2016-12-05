@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context="signin.project.com.finalproject.StartUp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_weight="2.14"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/add_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/add_title_text"
+            android:gravity="center"
+            android:textSize="36sp" />
+
+        <Spinner
+            android:id="@+id/PlaceCategory"
+            style="@android:style/Widget.Spinner"
+            android:spinnerMode="dialog"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/Categories" />
+
+        <EditText
+            android:id="@+id/PlaceName"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/Name" />
+
+        <EditText android:id="@+id/PlaceAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/Address" />
+
+        <Button
+            android:id="@+id/FillAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addPlace"
+            android:onClick="FillAddress"/>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.68">
+
+                <RadioButton android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:onClick="findRating"/>
+
+                <RadioButton android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:onClick="findRating"/>
+
+                <RadioButton android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:onClick="findRating"/>
+
+                <RadioButton android:id="@+id/radio4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:onClick="findRating"/>
+
+                <RadioButton android:id="@+id/radio5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:onClick="findRating"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <EditText android:id="@+id/PlaceComments"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/Comments" />
+
+        <Button
+            android:id="@+id/AddPlaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addPlace"
+            android:onClick="addPlace"/>
+    </LinearLayout>
+</LinearLayout>
